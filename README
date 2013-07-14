@@ -1,0 +1,39 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4659
+
+Grab the latest dev version from github: https://github.com/shirai07/buildmenu.
+
+If you use the build-tool Waf (http://code.google.com/p/waf), this plugin will
+assist you by providing a comfortable sidebar menu which lists major Waf
+commands and all existing build-targets of your current project. You can
+select one or more targets from the list for building.
+
+See https://github.com/shirai07/buildmenu/wiki for a screenshot.
+
+
+Mappings in the sidebar menu:
+
+<Space>
+select or unselect a build-target from the list. the target
+is highlighted in a different color to visualize your choice
+
+<Return>
+start building your selected build-target(s) with Waf. The
+resulting build command would usually look like this:
+   ./waf --targets=common,unittest1,unitest2
+
+'R'
+refresh build target list (plugin will run cmd "waf list" again)
+
+You need to set a key-mapping in your .vimrc file to open/close the sidebar
+menu (install this plugin and see its help file for details).
+
+
+This script is still quite young and far from being feature complete.
+Planned features for future versions:
+
+ * user can add own args to the waf command-line for building
+ * quick-help in the style of NERDTree (when pressing ?)
+ * support of other build systems like SCons and GNU Make (if feasible)
+ * multiselect targets via visual mode
+ * 'U' unselect all
+
